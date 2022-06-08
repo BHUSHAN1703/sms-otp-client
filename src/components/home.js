@@ -10,15 +10,15 @@ function Home() {
 
 	/*  The UseEffect below is used to verify the working of Protected Route. 
 	 Do not use it aimlessly as it will cause performance issue and server timout due to infinite execution in loop
-
-	useEffect(() => {
+	*/
+	/*useEffect(() => {
 		console.log(state.value)
 		axios
 			.post('http://localhost:8888/home', {
 				withCredentials: true
 			})
 			.then(function(res) {
-				// console.log(res.data);
+				 console.log(res.data);
 				setState({ ...state, value: res.data });
 			})
 			.catch(function(error) {
@@ -29,7 +29,7 @@ function Home() {
 
 	const logout = () => {
 		axios
-			.get('http://localhost:8888/logout')
+			.get('http://localhost:4000/logout')
 			.then((res) => {
 				console.log(res.data);
 			})
